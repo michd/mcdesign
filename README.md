@@ -1,6 +1,6 @@
 # Minecraft design tool
 
-** Note ** This is an old project I haven't touched in a long time. I'm only
+__Note:__ This is an old project I haven't touched in a long time. I'm only
 publishing its source because someone asked and I somehow hadn't already.
 
 This tool lets you setch out Minecraft design ideas in 2D with some of the
