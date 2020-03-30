@@ -1,0 +1,217 @@
+/* reset things */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	font-family: 'Arial';
+	font-size: 13px;
+	background: #FFF;
+	padding: 7px;
+}
+h1 {
+	background-color: #000;
+	color: #FFF;
+	font-size: 28px;
+	font-weight: bold;
+	margin: -4px -4px 15px -4px;
+	padding: 4px 10px;
+}
+h2 {
+	background-color: #666;
+	color: #FFF;
+	font-size: 20px;
+	font-weight: bold;
+	margin: -4px -4px 15px -4px;
+	padding: 2px 5px;
+}
+.clearfix { clear: both; }
+.gray { color: #555; }
+/* material styles */
+
+.material_0 { background-position: -176px 0; }
+.material_1 { background-position: -16px 0; }
+.material_3 { background-position: -32px 0; }
+.material_4 { background-position: 0 -16px; }
+.material_5 { background-position: -64px 0; }
+.material_12 { background-position: -32px -16px; }
+.material_13 { background-position: -48px -16px; }
+.material_14 { background-position: 0 -32px; }
+.material_15 { background-position: -16px -32px; }
+.material_17 { background-position: -64px -16px; }
+.material_20 { background-position: -16px -48px; }
+.material_22 { background-position: 0 -144px; }
+.material_23 { background-position: -208px -32px; }
+.material_24 { background-position: 0 -192px; }
+.material_25 { background-position: -96px -80px; }
+.material_35 { background-position: -16px -224px; }
+.material_37 { background-position: -208px 0; }
+.material_38 { background-position: -192px 0; }
+.material_39 { background-position: -208px -16px; }
+.material_40 { background-position: -192px -16px; }
+.material_41 { background-position: -112px -16px; }
+.material_42 { background-position: -96px -16px; }
+.material_43 { background-position: -80px 0; }
+.material_45 { background-position: -112px 0; }
+.material_46 { background-position: -128px 0; }
+.material_47 { background-position: -48px -32px; }
+.material_48 { background-position: -64px -32px; }
+.material_49 { background-position: -80px -32px; }
+.material_50 { background-position: 0 -80px; }
+.material_54 { background-position: -176px -16px; }
+.material_57 { background-position: -128px -16px; }
+.material_58 { background-position: -192px -48px; }
+.material_61 { background-position: -192px -32px; }
+.material_65 { background-position: -48px -80px; }
+.material_66 { background-position: 0 -128px; }
+.material_76 { background-position: -48px -96px; }
+.material_80 { background-position: 0 -64px; }
+.material_81 { background-position: -80px -64px; }
+.material_82 { background-position: -128px -64px; }
+.material_84 { background-position: -160px -64px; }
+.material_85 { background-position: -208px -224px; }
+.material_86 { background-position: -112px -112px; }
+.material_87 { background-position: -112px -96px; }
+.material_88 { background-position: -128px -96px; }
+.material_89 { background-position: -144px -96px; }
+
+#application_wrapper {
+	border: solid 8px #666;
+	padding: 7px;
+}
+
+/* design */
+#design_container {
+	border: solid 4px #CCC;
+	padding: 7px;
+}
+#design_container table {
+	border-spacing: 0;
+	border: solid 1px #333;
+	border-width: 1px 0 0 1px;
+}
+#design_container td {
+	border: solid 1px #333;
+	border-width: 0 1px 1px 0;
+	width: 15px;
+	height: 15px;
+	background-image: url('../img/material_sprite.png');
+	background-repeat: no-repeat;
+}
+.mark_top { border-top: solid 1px #F00 !important; }
+.mark_right { border-right: solid 2px #F00 !important; }
+.mark_bottom { border-bottom: solid 2px #F00 !important; }
+.mark_left { border-left: solid 1px #F00 !important; }
+
+
+
+/* coords */
+#coords_container {
+	margin-top: 8px;
+	border: solid 4px #CCC;
+	padding: 7px;
+	width: 100px;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+
+/*material*/
+#material_container {
+	margin-top: 8px;
+	border: solid 4px #CCC;
+	padding: 7px;
+}
+#cur_material_wrapper {
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+#cur_material {
+	border: solid 1px #000;
+	outline: solid 1px #0F0;
+	width: 16px;
+	height: 16px;
+	float: left;
+	margin-right: 5px;
+	background-image: url('../img/material_sprite.png');
+	background-repeat: no-repeat;
+}
+#material_container .material_wrap {
+	font-family: 'Arial';
+	font-size: 13px;
+	font-weight: bold;
+	float: left;
+	width: 45px;
+	cursor: pointer;
+	margin-bottom: 7px;
+}
+#material_container .material_wrap div {
+	border: solid 1px #000;
+	width: 16px;
+	height: 16px;
+	margin-right: 3px;
+	float: left;
+	background-image: url('../img/material_sprite.png');
+	background-repeat: no-repeat;
+}
+
+
+/* settings */
+form#sizeform { margin-bottom: 10px; }
+#settings_container {
+	margin-top: 8px;
+	border: solid 4px #CCC;
+	padding: 7px;
+}
+#setsize_width, #setsize_height {
+	width: 30px;
+}
+
+/*import and export*/
+#import_export_container {
+	margin-top: 8px;
+	border: solid 4px #CCC;
+	padding: 7px;
+}
+
+textarea#port_field {
+	display: block;
+	width: 100%;
+	height: 200px;
+
+	border: solid 1px #777;
+	font-family: 'courier';
+	font-size: 11px;
+	color: #000;
+}
+
+footer {
+	font-size: 11px;
+	text-align: center;
+	margin-top: 15px;
+	color: #666;
+}
