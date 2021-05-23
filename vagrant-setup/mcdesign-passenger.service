@@ -1,0 +1,22 @@
+[Unit]
+Description=MCDesign Passenger server
+After=network.target
+Requires=mariadb.service
+StartLimitInterval=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=vagrant
+ExecStartPre=
+ExecStart=/vagrant/vagrant-setup/run-passenger
+ExecStartPost=
+ExecStop=
+ExecReload=
+Environment="MCDESIGN_MYSQL_USER=mcdesign_dev"
+Environment="MCDESIGN_MYSQL_PWD=mcdesign_dev"
+Environment="MCDESIGN_MYSQL_DB=mcdesign_dev"
+
+[Install]
+WantedBy=multi-user.target

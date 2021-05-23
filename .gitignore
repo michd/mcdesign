@@ -1,0 +1,7 @@
+.vagrant/
+vagrant-setup/mcdesign.local/
+tmp/
+log/
+passenger.*.pid
+passenger.*.pid.lock
+
