@@ -32,4 +32,35 @@ Since there seems to be interest, I'm open to reviewing pull requests for adding
 
 If doing so, please ensure that the existing numbers for materials keep working; older designs made in it will use different materials.
 
+## Vagrant development environment
+
+For convenience, a [vagrant](https://www.vagrantup.com/) development environment is provided. 
+
+It is set up to serve MCDesign at `mcdesign.local`, with a default IP of 192.168.33.14. Add this to your system's hosts file.
+
+### SSL
+To enable SSL in the development environment, install `minica` from https://github.com/jsha/minica
+
+1. Run `minica --domains mcdesign.local
+   This will create a root cert and private key in the same folder named minica.pem and a key minica-key.pem. It will also create the folder `mcdesign.local` containing cert.pem and key.pem.
+2. Move the `mcdesign.local` folder into `vagrant-setup/`
+3. Copy `minica.pem` into that same `mcdesign.local/` folder
+4. Install the `minica.pem` root certificate for your system or browser. If you're using Firefox:
+   Preferences > Privacy & Security > Certificates > View Certificates > Authorities > Import
+   Then restart Firefox.
+
+If you don't want to use SSL, you'll have to edit vagrant-setup/mcdesign.local.conf before provisioning.
+
+If you did the above SSL setup after provisioning the vagrant box, you'll have to restart the nginx service or the box itself.
+
+### Virtual machine setup
+
+1. Install [Vagrant](http://vagrantup.com) on your dev machine
+2. Install [VirtualBox](https://www.virtualbox.org/) on your dev machine
+3. Clone this repository
+4. Open a terminal and navigate to the root folder of this repository
+5. Run `vagrant up`. This one will take a while, go do something else while you wait.
+6. Once finished, the script will tell you what to add to your hosts file. See "editing the hosts file"
+7. Fire up your browser and navigate to mcdesign.local
+8. Have fun doing some coding
 
