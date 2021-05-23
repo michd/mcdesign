@@ -41,7 +41,7 @@ It is set up to serve MCDesign at `mcdesign.local`, with a default IP of 192.168
 ### SSL
 To enable SSL in the development environment, install `minica` from https://github.com/jsha/minica
 
-1. Run `minica --domains mcdesign.local
+1. Run `minica --domains mcdesign.local`
    This will create a root cert and private key in the same folder named minica.pem and a key minica-key.pem. It will also create the folder `mcdesign.local` containing cert.pem and key.pem.
 2. Move the `mcdesign.local` folder into `vagrant-setup/`
 3. Copy `minica.pem` into that same `mcdesign.local/` folder
