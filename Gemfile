@@ -1,5 +1,5 @@
 source :rubygems
-gem 'sinatra' , '>= 2.0.2'
-gem 'mysql2', '~> 0.4.10'
-gem 'activerecord', '5.1.4'
+gem 'sinatra' , '>= 2.1.0'
+gem 'mysql2', '~> 0.5.3'
+gem 'activerecord', '6.1.3.2'
 
