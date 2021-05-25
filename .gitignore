@@ -5,4 +5,5 @@ log/
 passenger.*.pid
 passenger.*.pid.lock
 passenger/
-
+.bundle/
+vendor/
