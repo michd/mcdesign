@@ -8,7 +8,7 @@ available materials in the game. It lets you save these designs to a database
 so they can be shared with friends, or you export the design to JSON so you
 can save it on your own computer.
 
-You can check the version as of 2020-03-30 on [mcdesign.michd.me](https://mcdesign.michd.me/).
+You can check the version as of 2022-08-27 on [mcdesign.michd.me](https://mcdesign.michd.me/).
 
 ---
 
@@ -36,15 +36,15 @@ If doing so, please ensure that the existing numbers for materials keep working;
 
 For convenience, a [vagrant](https://www.vagrantup.com/) development environment is provided. 
 
-It is set up to serve MCDesign at `mcdesign.local`, with a default IP of 192.168.33.14. Add this to your system's hosts file.
+It is set up to serve MCDesign at `mcdesign.vagrant`, with a default IP of 192.168.56.15. Add this to your system's hosts file.
 
 ### SSL
 To enable SSL in the development environment, install `minica` from https://github.com/jsha/minica
 
-1. Run `minica --domains mcdesign.local`
-   This will create a root cert and private key in the same folder named minica.pem and a key minica-key.pem. It will also create the folder `mcdesign.local` containing cert.pem and key.pem.
-2. Move the `mcdesign.local` folder into `vagrant-setup/`
-3. Copy `minica.pem` into that same `mcdesign.local/` folder
+1. Run `minica --domains mcdesign.vagrant`
+   This will create a root cert and private key in the same folder named minica.pem and a key minica-key.pem. It will also create the folder `mcdesign.vagrant` containing cert.pem and key.pem.
+2. Move the `mcdesign.vagrant` folder into `vagrant-setup/`
+3. Copy `minica.pem` into that same `mcdesign.vagrant/` folder
 4. Install the `minica.pem` root certificate for your system or browser. If you're using Firefox:
    Preferences > Privacy & Security > Certificates > View Certificates > Authorities > Import
    Then restart Firefox.
