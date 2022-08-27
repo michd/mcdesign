@@ -1,5 +1,5 @@
 .vagrant/
-vagrant-setup/mcdesign.local/
+vagrant-setup/mcdesign.vagrant/
 tmp/
 log/
 passenger.*.pid

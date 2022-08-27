@@ -3,7 +3,7 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "archlinux/archlinux"
 
-  config.vm.network "private_network", ip: "192.168.33.14"
+  config.vm.network "private_network", ip: "192.168.56.15"
 
   config.vm.provider "virtualbox" do |vb|
     vb.memory = "4096"
@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
   config.vm.hostname = "mcdesign-vagrant"
 
   config.vm.provision "shell", privileged: false, inline: <<-SHELL
-    DEFAULT_IP="192.168.33.14"
+    DEFAULT_IP="192.168.56.15"
     HOME='/home/vagrant'
     RUBY_VERSION='2.7.3'
     MYSQL_PASSWORD='mcdesign'
@@ -82,8 +82,8 @@ Vagrant.configure("2") do |config|
     # Note: not starting it yet
 
     announce 10 "Installing nginx config and enabling"
-    sudo cp /vagrant/vagrant-setup/mcdesign.local.conf /etc/nginx/sites-available/
-    sudo ln -s /etc/nginx/sites-available/mcdesign.local.conf /etc/nginx/sites-enabled/
+    sudo cp /vagrant/vagrant-setup/mcdesign.vagrant.conf /etc/nginx/sites-available/
+    sudo ln -s /etc/nginx/sites-available/mcdesign.vagrant.conf /etc/nginx/sites-enabled/
     sudo systemctl enable nginx.service
 
     announce 11 "Installing MCDesign Sinatra app"
@@ -101,7 +101,7 @@ Vagrant.configure("2") do |config|
     echo "Provision finished, hopefully."
     echo ""
     echo "Make sure to add this to your hosts file:"
-    echo "$DEFAULT_IP mcdesign.local"
+    echo "$DEFAULT_IP mcdesign.vagrant"
     echo ""
     echo "If you haven't already, make sure to follow the SSL setup part of the"
     echo "README too."
