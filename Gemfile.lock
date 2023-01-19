@@ -22,7 +22,7 @@ GEM
     passenger (6.0.15)
       rack
       rake (>= 0.8.1)
-    rack (2.2.4)
+    rack (2.2.6.2)
     rack-protection (3.0.4)
       rack
     rake (13.0.6)
