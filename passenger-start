@@ -1,4 +1,5 @@
 #!/bin/bash
-
+export RBENV_ROOT=/usr/local/rbenv/bin
+export PATH="$RBENV_ROOT/bin:$PATH"
 eval "$(rbenv init -)"
-bundler exec passenter start . --port 4000 --address 127.0.0.1 --environment production --pid-file=passenger/pid --log-file=passenger/log
+bundler exec passenger start . --port 4000 --address 127.0.0.1 --environment production --pid-file=passenger/pid --log-file=passenger/log
