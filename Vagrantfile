@@ -14,7 +14,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", privileged: false, inline: <<-SHELL
     DEFAULT_IP="192.168.56.15"
     HOME='/home/vagrant'
-    RUBY_VERSION='2.7.3'
+    RUBY_VERSION='3.1.3'
     MYSQL_PASSWORD='mcdesign'
     DEV_DATABASE_USER='mcdesign_dev'
     DEV_DATABASE_PASSWORD='mcdesign_dev'
@@ -25,6 +25,7 @@ Vagrant.configure("2") do |config|
     }
 
     announce 1 "Installing updates"
+    sudo pacman -Sy archlinux-keyring --noconfirm
     sudo pacman -Syu --noconfirm
 
     announce 2 "Installing mysql"
@@ -36,7 +37,7 @@ Vagrant.configure("2") do |config|
     sudo systemctl start mariadb.service
 
     announce 3 "Installing assorted stuff"
-    sudo pacman -S git gcc make nodejs vim --noconfirm
+    sudo pacman -S git gcc make nodejs vim libyaml --noconfirm
 
     announce 4 "Setting up rbenv..."
     cd $HOME
@@ -50,7 +51,7 @@ Vagrant.configure("2") do |config|
     popd
 
     announce 5 "Installing ruby $RUBY_VERSION"
-    rbenv install "$RUBY_VERSION"
+    rbenv install "$RUBY_VERSION" --verbose
     rbenv global "$RUBY_VERSION"
 
     announce 6 "Installing bundler, passenger"
