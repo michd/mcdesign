@@ -1,4 +1,5 @@
 #!/bin/bash
 # Deployment script for on my server
-bundle-2.7 install
+eval "$(rbenv init - )"
+bundle install
 touch tmp/restart.txt
